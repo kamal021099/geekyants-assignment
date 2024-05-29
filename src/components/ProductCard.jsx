@@ -10,9 +10,9 @@ const ProductCard = ({ product, addToCart, removeFromCart, cartItems }) => {
         className="w-full h-48 object-cover"
       />
       <h2 className="text-lg font-bold mt-2 truncate">{product.title}</h2>
-      <p className="mt-1">${product.price}</p>
-      <p className="mt-1">
-        {product.rating.rate}/5 ({product.rating.count})
+      <p className="mt-1 text-lg">${product.price}</p>
+      <p className="mt-1 text-gray-500">
+        Rating: {product.rating.rate}/5 ({product.rating.count} reviews)
       </p>
       {isInCart ? (
         <div className="flex items-center mt-2">
